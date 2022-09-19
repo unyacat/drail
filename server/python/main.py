@@ -3,7 +3,7 @@ import psycopg2
 from waitress import serve
 
 # DB接続情報
-DB_HOST = 'localhost'
+DB_HOST = 'db'
 DB_PORT = '5432'
 DB_NAME = 'drail'
 DB_USER = 'postgres'
@@ -18,9 +18,8 @@ def get_connection():
 ))
 
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder='./dist/static', template_folder='./dist/web')
 app.config["JSON_AS_ASCII"] = False
-
 
 @app.route("/railways")
 def hello_world():

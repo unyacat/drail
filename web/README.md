@@ -14,6 +14,7 @@ npm run serve
 ```
 npm run build
 ```
+ビルドデータをサーバが指定するディレクトリに配置する必要があります．
 
 ### Lints and fixes files
 ```
